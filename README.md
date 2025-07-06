@@ -1,0 +1,12 @@
+Drowsiness while driving is one of the major causes of road accidents, particularly in truck, bus, and long-route drivers. Detecting driver drowsiness early can help avoid accidents and save lives.
+This project aims to design a simple, low-cost system that can detect signs of drowsiness by detecting eye closure duration, and provide a reactionary immediate alert through a buzzer and LED.
+
+AIM:
+To design and implement a simple microcontroller-based Drowsiness Detection System that monitors the driver's eye activity and alerts them with a buzzer when signs of drowsiness or inattention are detected, improving road safety.
+
+Results:
+
+Successfully detected driver drowsiness using an IR-based Eye Blink Sensor.
+Triggered a buzzer alert when prolonged eye closure was detected.
+Simulated the working circuit using Tinkercad.
+Generated PCB design and gerber files.
