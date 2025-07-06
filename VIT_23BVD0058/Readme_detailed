@@ -15,11 +15,11 @@ A microcontroller-based system that detects driver drowsiness and alerts them us
 - EasyEDA (PCB design )
 
 ## Folder Structure
-- `Code/` – Contains Arduino code
-- `Simulation/` – Tinkercad or Fritzing file/image
-- `Gerber/` – Gerber files for PCB
-- `Video/` – Demo video (or YouTube link in README)
-- `README.md` – Project documentation
+- Code – Contains Arduino code
+- Simulation – Tinkercad file/image
+- Gerber – Gerber files for PCB
+- Video – Demo video (or YouTube link in README)
+- Report PDF – Project documentation
 
 Drowsiness while driving is one of the major causes of road accidents, particularly in truck, bus, and long-route drivers. Detecting driver drowsiness early can help avoid accidents and save lives.
 This project aims to design a simple, low-cost system that can detect signs of drowsiness by detecting eye closure duration, and provide a reactionary immediate alert through a buzzer and LED.
