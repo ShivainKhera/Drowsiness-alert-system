@@ -1,0 +1,36 @@
+//Below is the Arduino code for detecting eye closure and triggering alerts
+const int IR = 2;     
+const int buzz = 8;       
+const int led = 13;         
+unsigned long eyeCloseStart = 0;
+bool eyeClosed = false;
+unsigned long threshold = 2000;
+
+void setup() {
+  pinMode(2, INPUT_PULLUP);
+  Serial.begin(9600);
+  pinMode(IR, INPUT_PULLUP);
+  pinMode(buzz, OUTPUT);
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int sensorValue = digitalRead(IR);
+
+  if (sensorValue == LOW) { 
+    if (!eyeClosed) {
+      eyeClosed = true;
+      eyeCloseStart = millis();
+    } else if (millis() - eyeCloseStart > threshold) {
+      digitalWrite(buzz, HIGH);
+      digitalWrite(led, HIGH);
+    }
+  } else { // eye open
+    eyeClosed = false;
+    digitalWrite(buzz, LOW);
+    digitalWrite(led, LOW);
+  }
+  Serial.println(digitalRead(2));
+  delay(200);
+}
